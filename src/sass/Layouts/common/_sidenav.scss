@@ -1,0 +1,73 @@
+// SIDE NAVIGATION STYLES
+.sidenav-container {
+    position: fixed;
+    left: 0;
+    top: 70px;
+    bottom: 0;
+    width: 250px;
+    background: $white;
+    box-shadow: 4px 0px 19px rgba(0,0,0,0.05);
+    overflow-y: auto;
+  
+    @include scrollbar(10px, $grey, $light_grey, darken($grey, 10%));
+  
+    .sidenav {
+      &-nav {
+        list-style: none;
+  
+        &-item {
+          a {
+            text-decoration: none;
+            display: block;
+            color: $black;
+            padding: 20px 35px;
+            font-family: $avertaSemiBold;
+            position: relative;
+            user-select: none;
+            transition: background .5s, color .8s;
+  
+            .icon {
+              position: relative;
+              top: 2px;
+              padding-right: 10px;
+            }
+  
+            &:hover {
+              color: $blue;
+              background: lighten($blue, 65%);
+            }
+  
+            &:active {
+              color: darken($blue, 10%);
+              background: lighten($blue, 60%);
+            }
+  
+            &.sidenav-active {
+              color: $blue;
+              background: lighten($blue, 65%);
+  
+              &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 8px;
+                background: $blue;
+                @include animation("animateleft .5s");
+  
+                @include keyframes("animateleft") {
+                  from {
+                    transform: translateX(-20px);
+                  }
+                  to {
+                    transform: translateX(0);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

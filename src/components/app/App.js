@@ -6,7 +6,7 @@ import { getUserRole } from "../utils/Utils";
 
 // IMPORT COMPONENTS
 import Header from "../common/header/Header.common";
-
+import Sidenav from "../common/sidenav/Sidenav.common"
 // IMPORT ROUES
 import NotFoundPage from "../notFoundPage/NotFoundPage";
 
@@ -54,7 +54,7 @@ const AppWithRouter = () => {
         <React.Fragment>
             <Router>
                 <Header />
-                
+                <Sidenav/>
                 <App />
             </Router>
         </React.Fragment>

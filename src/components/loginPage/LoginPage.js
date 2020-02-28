@@ -2,7 +2,9 @@ import React from "react";
 
 const LoginPage = () => {
   return (
-    <div>
+    <div style={{  paddingTop: 120,
+      paddingLeft: 260
+    }}>
       Login Page
     </div>
   )

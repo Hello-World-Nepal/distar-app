@@ -3,7 +3,7 @@ import { ROLE_ADMIN, ROLE_USER } from "./UserRoles";
 // ALL UTILITIES FUNCTIONS GOES HERE
 export const isLoggedIn = () => {
   // CHECK DATABASE FOR LOGGED USER WITH COOKIES / LOCAL STORAGE
-  return false;
+  return true;
 }
 
 export const getUserRole = () => {
